@@ -1,14 +1,14 @@
 {
-  "root": "apps/1/1",
-  "sourceRoot": "apps/1/1",
+  "root": "apps/1/2",
+  "sourceRoot": "apps/1/2",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "@nrwl/node:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/1/1",
-        "main": "apps/1/1/main.ts",
+        "outputPath": "dist/apps/1/2",
+        "main": "apps/1/2/main.ts",
         "tsConfig": "tsconfig.base.json"
       },
       "configurations": {
@@ -22,14 +22,22 @@
     "serve": {
       "executor": "@nrwl/node:execute",
       "options": {
-        "buildTarget": "1-1:build"
+        "buildTarget": "1-2:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/1/1/**/*.ts"]
+        "lintFilePatterns": ["apps/1/2/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/1/2"],
+      "options": {
+        "jestConfig": "apps/1/2/jest.config.js",
+        "passWithNoTests": true
       }
     }
   },

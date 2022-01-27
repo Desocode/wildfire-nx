@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
-    "1-1": "apps/1/1"
+    "1-1": "apps/1/1",
+    "2-1": "apps/1/2",
+    "util-1": "libs/util-1",
+    "util-2": "libs/util-2"
   }
 }
