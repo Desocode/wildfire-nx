@@ -7,9 +7,10 @@
       "executor": "@nrwl/node:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/1/2",
+        "outputPath": "dist/websites/1/2/[hash]",
         "main": "apps/1/2/main.ts",
-        "tsConfig": "tsconfig.base.json"
+        "tsConfig": "tsconfig.base.json",
+        "webpackConfig": "tools/webpack/webpack.config.ts"
       },
       "configurations": {
         "production": {
